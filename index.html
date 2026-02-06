@@ -259,14 +259,14 @@
       const z = zone.getBoundingClientRect();
       const b = noBtn.getBoundingClientRect();
 
-      let dx = (b.left + b.width / 2) - px;
-      let dy = (b.top + b.height / 2) - py;
-      let mag = Math.hypot(dx, dy) || 1;
+      let dx = (b.left + b.width / 4) - px;
+      let dy = (b.top + b.height / 4) - py;
+      let mag = Math.hypot(dx, dy) || 2;
       dx /= mag;
       dy /= mag;
 
-      let newLeft = (b.left - z.left) + dx * 150;
-      let newTop  = (b.top - z.top) + dy * 150;
+      let newLeft = (b.left - z.left) + dx * 300;
+      let newTop  = (b.top - z.top) + dy * 300;
 
       newLeft = clamp(newLeft, 0, z.width - b.width);
       newTop  = clamp(newTop, 0, z.height - b.height);
@@ -300,6 +300,7 @@
   </script>
 </body>
 </html>
+
 
 
 
